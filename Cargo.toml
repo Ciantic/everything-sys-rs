@@ -1,5 +1,6 @@
 [package]
 name = "everything-sys"
+description = "VoidTools' Everything C-bindings in Rust"
 version = "0.1.0"
 authors = ["Jari Pennanen <ciantic@oksidi.com>"]
 edition = "2018"
