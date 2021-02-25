@@ -1,0 +1,15 @@
+[package]
+name = "everything-sys"
+version = "0.1.0"
+authors = ["Jari Pennanen <ciantic@oksidi.com>"]
+edition = "2018"
+
+[target.'cfg(windows)'.dependencies]
+winapi = { version = "0.3", features = ["windef"] }
+
+[build-dependencies]
+bindgen = "0.57"
+cc = "*"
+
+[dev-dependencies]
+widestring = "*"
