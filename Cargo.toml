@@ -3,6 +3,11 @@ name = "everything-sys"
 version = "0.1.0"
 authors = ["Jari Pennanen <ciantic@oksidi.com>"]
 edition = "2018"
+include = ["src/**/*", "Cargo.toml", "Everything/**/*"]
+readme = "README.md"
+license = "MIT"
+repository = "https://github.com/Ciantic/everything-sys-rs/"
+keywords = ["windows"]
 
 [target.'cfg(windows)'.dependencies]
 winapi = { version = "0.3", features = ["windef"] }
@@ -13,3 +18,10 @@ cc = "*"
 
 [dev-dependencies]
 widestring = "*"
+
+
+[package.metadata.docs.rs]
+default-target = "x86_64-pc-windows-msvc"
+targets = ["x86_64-pc-windows-msvc"]
+rustc-args = ["--cfg",  "memory_module_sys_docs_rs"]
+rustdoc-args = ["--cfg", "memory_module_sys_docs_rs"]
