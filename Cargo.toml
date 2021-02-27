@@ -1,7 +1,7 @@
 [package]
 name = "everything-sys"
 description = "VoidTools' Everything C-bindings in Rust"
-version = "0.1.3"
+version = "0.1.4"
 authors = ["Jari Pennanen <ciantic@oksidi.com>"]
 edition = "2018"
 include = ["src/**/*", "Everything/**/*", "build.rs", "Cargo.toml"]
@@ -23,5 +23,3 @@ widestring = "0.4"
 [package.metadata.docs.rs]
 default-target = "x86_64-pc-windows-msvc"
 targets = ["x86_64-pc-windows-msvc"]
-rustc-args = ["--cfg",  "running_inside_docs_rs"]
-rustdoc-args = ["--cfg", "running_inside_docs_rs"]

@@ -2,7 +2,7 @@ use std::{env, path::Path};
 use std::{fs::OpenOptions, io::Write};
 
 fn main() {
-    if cfg!(not(running_inside_docs_rs)) {
+    if env::var("DOCS_RS") != Ok("1".into()) {
         let cargo_dir_str = &env::var("CARGO_MANIFEST_DIR").unwrap();
         let cargo_dir = Path::new(cargo_dir_str);
         let bindings_file = cargo_dir.join("src/lib.rs");
